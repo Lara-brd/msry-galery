@@ -1,0 +1,18 @@
+
+
+<!-- Grid masonry -->
+
+<div class="grid">
+  <ngx-masonry  [options]="{gutter: 15, horizontalOrder: true , fitWidth: true}"
+                [ordered]="true">
+
+
+      <!-- Cards que cambian dependiendo del listado enviado al hijo -->
+      <app-card-masonry  *ngFor="let photo of listRandom$ |async" [photo]="photo"></app-card-masonry>
+
+
+  </ngx-masonry>
+</div>
+
+
+

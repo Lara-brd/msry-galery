@@ -1,0 +1,32 @@
+header{
+  display: flex;
+  padding:20px;
+  .logo{
+    p{
+      font-family: 'Damion', cursive;
+      margin-top:63px;
+      color:gray;
+      font-size:1.4rem;
+    }
+  }
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  header{
+    justify-content: center;
+    .logo{
+      flex-direction: column;
+      p{
+        margin-top:20px;
+      }
+    }
+  }
+  }
+
+
+
+@media screen and (max-width: 575px) {
+
+}
