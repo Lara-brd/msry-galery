@@ -10,6 +10,8 @@ import { GalleryRoutingModule } from './gallery-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { CardMasonryComponent } from './components/card-masonry/card-masonry.component';
+import { SpinnerModule } from '../shared/components/spinner/spinner.module';
+
 
 
 
@@ -27,7 +29,8 @@ import { CardMasonryComponent } from './components/card-masonry/card-masonry.com
     CommonModule,
     GalleryRoutingModule,
     NgxMasonryModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    SpinnerModule
   ]
 })
 export class GalleryModule { }

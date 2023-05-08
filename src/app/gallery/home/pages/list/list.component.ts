@@ -10,7 +10,10 @@ import { DataService } from 'src/app/shared/services/data.service';
 })
 export class ListComponent implements OnInit {
 
-  listRandom:Result[] = [];
+  private _listRandom:Result[] = [];
+  get listRandom(){
+    return [...this._listRandom]
+  }
   pageRandom:number = 1;
   
   ////////////////////////////////////////////
@@ -20,7 +23,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     //suscripcion para cargar fotos random al inicio
     this.dataSvc.getRandomData().subscribe(photos => {
-      this.listRandom = photos;
+      this._listRandom = photos;
     })
 
   }
@@ -39,7 +42,7 @@ export class ListComponent implements OnInit {
       //repeticiones --> nueva array solo con ids
       var ids = new Set (this.listRandom.map(d => d.id));
       //a la respuesta aplica fiter. Recoge el contenido de listPhotos y se le añade la data filtrada ( retorna booleano).Solo añade data si no existe el id
-      this.listRandom = [...this.listRandom, ...resp.filter(d => !ids.has(d.id))]
+      this._listRandom = [...this._listRandom, ...resp.filter(d => !ids.has(d.id))]
   })
   }
 
