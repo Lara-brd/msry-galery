@@ -1,18 +1,28 @@
 
+<!-- section Scroll infinito, recoge dentro la iteración  -->
+<section
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()">
 
-<!-- Grid masonry -->
+
+
+<!-- Grid masonry -------------------------------->
 
 <div class="grid">
   <ngx-masonry  [options]="{gutter: 15, horizontalOrder: true , fitWidth: true}"
                 [ordered]="true">
 
-
       <!-- Cards que cambian dependiendo del listado enviado al hijo -->
-      <app-card-masonry  *ngFor="let photo of listRandom$ |async" [photo]="photo"></app-card-masonry>
-
+      <app-card-masonry  *ngFor="let photo of listRandom" [photo]="photo"></app-card-masonry>
 
   </ngx-masonry>
 </div>
 
+<!--end Grid masonry -------------------------------->
 
+
+
+</section>
 

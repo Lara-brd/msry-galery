@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './home/pages/list/list.component';
 import { PhotoInfoComponent } from './home/pages/photo-info/photo-info.component';
@@ -25,6 +27,7 @@ import { CardMasonryComponent } from './components/card-masonry/card-masonry.com
     CommonModule,
     GalleryRoutingModule,
     NgxMasonryModule,
+    InfiniteScrollModule
   ]
 })
 export class GalleryModule { }

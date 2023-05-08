@@ -11,19 +11,23 @@ export class DataService {
   private key:string = "kc1LTGqcydpvmP_hn866YUHc5VTn_LKcMdo71u_gStg";
   private url:string = "https://api.unsplash.com/";
 
-  private listRandomPhotos$ = this.getRandomData();
-  listRandom$ = this.listRandomPhotos$;
-
 
   ////////////////////////////////////////////
 
   constructor( private http:HttpClient ) { }
 
   //RANDOM DATA
-  //metodo para recibir imágenes y su información de la api unsplash devuelve observable y manda el array de datos a la propiedad listPhotos
+  //metodo para recibir imágenes y su información de la api unsplash devuelve observable.
   getRandomData(){
-    return this.http.get<Result[]>(`${this.url}photos/?client_id=${ this.key}`)
+    return this.http.get<Result[]>(`${this.url}photos/?client_id=${ this.key}`)  
   }
+
+  //RANDOM PAGE
+  //buscando por página
+  getPhotosByPage( pageNum:number){
+    return this.http.get<Result[]>(`${this.url}photos/?client_id=${ this.key }&page=${pageNum}`)
+  }
+  
 
 
 }
