@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Result } from '../interfaces/apiResonse.interface';
+import { Result, Search } from '../interfaces/apiResonse.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,10 @@ export class DataService {
   //buscando por página
   getPhotosByPage( pageNum:number){
     return this.http.get<Result[]>(`${this.url}photos/?client_id=${ this.key }&page=${pageNum}`)
+  }
+
+  getSearchPhotos( pageNum:number, query:string ){
+    return this.http.get<Search>(`${this.url}search/photos?page=${pageNum}&query=${query}&client_id=${this.key}`)
   }
   
 

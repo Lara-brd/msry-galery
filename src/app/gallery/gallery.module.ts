@@ -11,9 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { CardMasonryComponent } from './components/card-masonry/card-masonry.component';
 import { SpinnerModule } from '../shared/components/spinner/spinner.module';
-
-
-
+import { MaterialModule } from '../shared/material/material.module';
 
 
 
@@ -30,7 +28,8 @@ import { SpinnerModule } from '../shared/components/spinner/spinner.module';
     GalleryRoutingModule,
     NgxMasonryModule,
     InfiniteScrollModule,
-    SpinnerModule
+    SpinnerModule,
+    MaterialModule
   ]
 })
 export class GalleryModule { }

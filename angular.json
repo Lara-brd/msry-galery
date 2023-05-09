@@ -30,7 +30,11 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
+            ],
+            "allowedCommonJsDependencies": [
+              "ev-emitter/ev-emitter"
             ],
             "scripts": []
           },
@@ -93,6 +97,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []

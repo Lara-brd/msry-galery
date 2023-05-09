@@ -6,8 +6,9 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ErrorPageComponent } from './shared/error-page/error-page.component';
+
 import { SpinnerInterceptor } from './shared/interceptors/spinner.interceptor';
+import { ErrorPageComponent } from './shared/pages/error-page/error-page.component';
 
 @NgModule({
   declarations: [

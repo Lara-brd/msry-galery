@@ -1,4 +1,12 @@
 
+<div class="upButton" *ngIf="showButton" (click)="onScrollTop()">
+  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>arrow_upward</mat-icon>
+  </button>
+</div>
+
+
+
 <!-- section Scroll infinito, recoge dentro la iteración  -->
 <section
       infiniteScroll

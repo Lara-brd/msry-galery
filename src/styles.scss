@@ -14,6 +14,11 @@ $gray-transparent:rgba(75, 75, 75, 0.327);
 
 html, body { height: 100%; }
 
+html{
+  scroll-behavior: smooth;
+}
+
+
 body{
   font-family: 'Nunito', sans-serif;
   background-color: $main-dark;
@@ -68,4 +73,6 @@ body{
   justify-content: center;
   
 }
+
+
 
