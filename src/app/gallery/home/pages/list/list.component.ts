@@ -25,7 +25,7 @@ export class ListComponent implements OnInit {
   pageSearch:number = 1;
 
 
-  // up button
+  //up button
   showButton:boolean = false;
   
   ////////////////////////////////////////////
