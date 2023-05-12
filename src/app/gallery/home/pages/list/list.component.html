@@ -23,7 +23,15 @@
                 [ordered]="true">
 
       <!-- Cards que cambian dependiendo del listado enviado al hijo -->
-      <app-card-masonry  *ngFor="let photo of listRandom" [photo]="photo"></app-card-masonry>
+      <div *ngIf="onRandomOption; else search">
+        <app-card-masonry  *ngFor="let photo of listRandom" [photo]="photo"></app-card-masonry>
+      </div>
+
+      <ng-template #search>
+        <app-card-masonry  *ngFor="let photo of listSearch" [photo]="photo"></app-card-masonry>
+      </ng-template>
+      
+
 
   </ngx-masonry>
 </div>

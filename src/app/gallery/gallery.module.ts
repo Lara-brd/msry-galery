@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
 
@@ -12,6 +13,7 @@ import { NgxMasonryModule } from 'ngx-masonry';
 import { CardMasonryComponent } from './components/card-masonry/card-masonry.component';
 import { SpinnerModule } from '../shared/components/spinner/spinner.module';
 import { MaterialModule } from '../shared/material/material.module';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -21,7 +23,8 @@ import { MaterialModule } from '../shared/material/material.module';
     ListComponent,
     PhotoInfoComponent,
     HeaderComponent,
-    CardMasonryComponent
+    CardMasonryComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +32,9 @@ import { MaterialModule } from '../shared/material/material.module';
     NgxMasonryModule,
     InfiniteScrollModule,
     SpinnerModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    FormsModule
+  ],
+  entryComponents:[ ConfirmDialogComponent],
 })
 export class GalleryModule { }

@@ -1,6 +1,7 @@
 header{
   display: flex;
   padding:20px;
+  align-items: flex-end;
   .logo{
     p{
       font-family: 'Damion', cursive;
@@ -9,15 +10,23 @@ header{
       font-size:1.4rem;
     }
   }
+  .search-input{
+    margin-bottom: 7px;
+  }
 }
 
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
   header{
+  
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
     .logo{
       flex-direction: column;
+      justify-content: center;
       p{
         margin-top:20px;
       }

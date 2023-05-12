@@ -18,6 +18,9 @@ html{
   scroll-behavior: smooth;
 }
 
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
 
 body{
   font-family: 'Nunito', sans-serif;
@@ -74,5 +77,73 @@ body{
   
 }
 
+.custom-modalbox >  mat-dialog-container {
+  padding:100px;
+}
 
 
+//////dialog
+
+.myDialogClass{
+  background-color: #141617;
+  position:relative;
+  overflow: auto;
+  border-radius: 5px;
+  max-width: 80vw !important;
+
+}
+
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color:transparent!important;
+  width: 100%!important;
+}
+
+
+mat-dialog-content{
+  max-height: 93%!important;
+  padding: 0!important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__content{
+  overflow-x: hidden;
+}
+
+
+
+@media screen and (max-width: 575px) {
+  .myDialogClass {
+    max-width: 100vw !important;
+  }
+  // .mat-mdc-dialog-container .mdc-dialog__content{
+  //   overflow: hidden;
+  // }
+}
+
+
+
+
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .scroller {
+    scrollbar-width: thin;
+    scrollbar-color: #c81956 #969696;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .scroller::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scroller::-webkit-scrollbar-track {
+    background: #969696;
+  }
+
+  .scroller::-webkit-scrollbar-thumb {
+    background-color: #c81956;
+    border-radius: 10px;
+    border: 0px dotted #130b0b;
+  }

@@ -173,3 +173,12 @@ export interface ResultTopicSubmissions {
   interiors?:        BusinessWork;
   "current-events"?: BusinessWork;
 }
+
+
+
+//INTERFACE query
+export interface Query{
+  search:string,
+  onRandom:boolean,
+  list:Result[]
+}
