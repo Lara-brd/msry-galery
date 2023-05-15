@@ -67,6 +67,7 @@ export class DataService {
     return this.http.get<Result[]>(`${this.url}photos/?client_id=${ this.key }&page=${pageNum}`)
   }
 
+  //parametros query y numero de página
   getSearchPhotosByPage( pageNum:number, query:string ){
     return this.http.get<Search>(`${this.url}search/photos?page=${pageNum}&query=${query}&client_id=${this.key}`)
   }

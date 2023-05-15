@@ -42,10 +42,15 @@ export class ListComponent implements OnInit {
     })
 
     //suscriptcion que carga el resultado de la búsquda
-    this.dataSvc.selectedQuery$.subscribe(query => {
-      this.listSearch = query.list;
-      this.onRandomOption = query.onRandom;
-      this.query = query.search;
+    this.dataSvc.selectedQuery$.subscribe({
+      next: query => {
+        this.listSearch = query.list;
+        this.onRandomOption = query.onRandom;
+        this.query = query.search;
+      },
+      error:err=> {
+        console.log(err);
+      }
     })
 
   }
