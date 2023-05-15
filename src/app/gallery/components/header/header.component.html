@@ -29,18 +29,14 @@
         <span>{{search | titlecase}}</span>
       </button>
       <!-- ------------------ -->
-      <div class="clear" (click)="onClearList()">
+      <div class="clear" (click)="onClearList()" *ngIf="!noList; else list">
         <mat-icon>delete</mat-icon>
         Clear List
       </div>
-      <!-- <button mat-icon-button 
-              color="warn" 
-              aria-label="Example icon button with a home icon" 
-              (click)="onClearList()"
-              class="clearBtn">
-        <mat-icon>delete</mat-icon>
-        <p>Clear</p>
-      </button> -->
+      <ng-template #list>
+        <p class="empty"> Empty list</p> 
+      </ng-template>
+      
     </mat-menu>
 
   </div>
