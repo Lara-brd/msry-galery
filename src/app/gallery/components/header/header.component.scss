@@ -1,23 +1,42 @@
 header{
   display: flex;
   padding:20px;
-  align-items: flex-end;
+  align-items: center;
   .logo{
     p{
       font-family: 'Damion', cursive;
-      margin-top:63px;
+      margin-top:70px;
       color:gray;
       font-size:1.4rem;
     }
   }
-  .search-input{
-    margin-bottom: 7px;
+  .search-area{
+    margin-top:30px;
+    mat-icon{
+      color:white;
+    }
+    .searchListBtn{
+      padding:28px;
+      margin-left:10px;
+    }
   }
 }
 
+.clear{
+  padding:5px 15px;
+  background-color:#f44336;
+  color:#1f2021;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+  mat-icon{
+    margin-right: 5px;
+    
+  }
+}
 
 /* Responsive Styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
   header{
   
     justify-content: center;
@@ -35,7 +54,10 @@ header{
   }
 
 
-
 @media screen and (max-width: 575px) {
+  .search-area{
+    display: flex;
+    flex-direction: column;
+  }
 
 }

@@ -7,7 +7,6 @@ import { ErrorPageComponent } from './shared/pages/error-page/error-page.compone
 const routes: Routes = [
   {
     path:'gallery',
-    component:HomeComponent,
     loadChildren:()=>import('./gallery/gallery.module').then(m => m.GalleryModule)
   },
   { 

@@ -6,8 +6,8 @@
 
   <span class="spacer"></span>
 
-  <div class="search-input">
-    <mat-form-field class="example-form-field">
+  <div class="search-area">
+    <mat-form-field appearance="outline" class="example-form-field">
       <mat-label>Enter a search</mat-label>
 
       <input matInput type="text" [(ngModel)]="value" (keyup.enter)="setQueryInfo()">
@@ -16,8 +16,34 @@
 
       </button>
     </mat-form-field>
-  </div>
 
+
+    <!-- My search list -->
+    
+    <button class="searchListBtn" mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      My Search List<mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <!-- Itera por la lista -->
+      <button mat-menu-item *ngFor = "let search of historial" (click)="onSearchByQuery(search)">
+        <span>{{search | titlecase}}</span>
+      </button>
+      <!-- ------------------ -->
+      <div class="clear" (click)="onClearList()">
+        <mat-icon>delete</mat-icon>
+        Clear List
+      </div>
+      <!-- <button mat-icon-button 
+              color="warn" 
+              aria-label="Example icon button with a home icon" 
+              (click)="onClearList()"
+              class="clearBtn">
+        <mat-icon>delete</mat-icon>
+        <p>Clear</p>
+      </button> -->
+    </mat-menu>
+
+  </div>
 
 
 </header>

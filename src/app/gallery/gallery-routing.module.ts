@@ -9,6 +9,10 @@ const routes:Routes = [
     path:'',
     children:[
       {
+        path:'home',
+        component:HomeComponent
+      },
+      {
         path:'list',
         component:ListComponent
       },
@@ -18,7 +22,7 @@ const routes:Routes = [
       },
       {
         path:'**',
-        redirectTo:'list'
+        redirectTo:'home'
       }
     ]
   }
