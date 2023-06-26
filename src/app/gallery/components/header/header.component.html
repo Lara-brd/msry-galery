@@ -1,7 +1,7 @@
 <header>
   <div class="logo disp-flex">
     <img src="../../../../assets/images/logogris.png" alt="">
-        <p>... Powered by Unsplash</p> 
+        <p>... Powered by Unsplash</p>
   </div>
 
   <span class="spacer"></span>
@@ -19,7 +19,7 @@
 
 
     <!-- My search list -->
-    
+
     <button class="searchListBtn" mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       My Search List<mat-icon>arrow_drop_down</mat-icon>
     </button>
@@ -29,14 +29,14 @@
         <span>{{search | titlecase}}</span>
       </button>
       <!-- ------------------ -->
-      <div class="clear" (click)="onClearList()" *ngIf="!noList; else list">
+      <div class="clear" (click)="onClearList()" *ngIf="!emptyList; else list">
         <mat-icon>delete</mat-icon>
         Clear List
       </div>
       <ng-template #list>
-        <p class="empty"> Empty list</p> 
+        <p class="empty"> Empty list</p>
       </ng-template>
-      
+
     </mat-menu>
 
   </div>

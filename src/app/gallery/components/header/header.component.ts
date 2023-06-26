@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit{
   value:string = '';
   listPhotos:Result[]=[];
   historial:string[]=[];
-  noList:boolean = false;
+  emptyList:boolean = false;
 
   /////////////////////////////////////////////
 
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit{
   ngOnInit(): void {
     this.historial = this.dataSvc.historial
     if(this.historial.length == 0){
-      this.noList = true;
+      this.emptyList = true;
     }
   }
 
@@ -30,12 +30,17 @@ export class HeaderComponent implements OnInit{
   setQueryInfo(){
     this.dataSvc.getSearchPhotosByPage(1,this.value)
       .subscribe(data => {
-        this.listPhotos = data.results;
-        this.dataSvc.setQuery({search:this.value, onRandom:false, list:data.results})
+        if( data.total === 0){
+          this.value = 'no Results';
+        }else{
+          this.listPhotos = data.results;
+          this.dataSvc.setQuery({search:this.value, onRandom:false, list:data.results});
+          this.dataSvc.addQueryToHistorial(this.value);
+          this.historial = this.dataSvc.historial;
+          this.emptyList = false;
+        }
       });
-      this.dataSvc.buscarFotos(this.value);
-      this.historial = this.dataSvc.historial;
-      this.noList = false;
+
     }
 
 
@@ -55,7 +60,7 @@ export class HeaderComponent implements OnInit{
     onClearList(){
       this.dataSvc.clearStorage();
       this.historial = this.dataSvc.historial;
-      this.noList = true;
+      this.emptyList = true;
     }
 
 

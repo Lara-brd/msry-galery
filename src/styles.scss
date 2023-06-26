@@ -9,7 +9,7 @@ $gray-transparent:rgba(75, 75, 75, 0.327);
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 html, body { height: 100%; }
@@ -31,7 +31,6 @@ body{
 
   &::after {
     content: '';
-    background-image: radial-gradient(rgb(255, 255, 255) 2%, #fff0 10.2%);
     background-position: 0 0;
     background-repeat: repeat;
     background-size: 10px 10px;
@@ -74,7 +73,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 .custom-modalbox >  mat-dialog-container {

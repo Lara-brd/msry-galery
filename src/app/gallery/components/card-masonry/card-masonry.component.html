@@ -3,7 +3,7 @@
 
 <!-- Itera por la información del observable con pipe async -->
 <!-- ITEMS del grid masonry -->
-    <div ngxMasonryItem class="grid-item shadow" (click)="onOpenDialogClick(photo)">
+    <div ngxMasonryItem class="grid-item" (click)="onOpenDialogClick(photo)">
       <img [src]="photo.urls.small_s3" alt="photo.alt_description">
       <p class="damion">Photo by {{photo.user.name}}</p>
     </div>
