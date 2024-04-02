@@ -9,7 +9,7 @@ const routes: Routes = [
     path:'gallery',
     loadChildren:()=>import('./gallery/gallery.module').then(m => m.GalleryModule)
   },
-  { 
+  {
     path:'404',
     component:ErrorPageComponent
   },
@@ -18,14 +18,14 @@ const routes: Routes = [
     redirectTo:'gallery',
     pathMatch:'full'
   },
-  { 
+  {
     path:'**',
     component:ErrorPageComponent
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

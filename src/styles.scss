@@ -45,6 +45,32 @@ body{
   }
 
 
+
+/* ===== Scrollbar CSS ===== */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgb(85, 85, 85);
+  border-radius:50px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
     ////////////////////////////////////////////
 
 .shadow{
@@ -124,24 +150,3 @@ mat-dialog-content{
 
 
 
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  .scroller {
-    scrollbar-width: thin;
-    scrollbar-color: #c81956 #969696;
-  }
-
-  /* Chrome, Edge, and Safari */
-  .scroller::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .scroller::-webkit-scrollbar-track {
-    background: #969696;
-  }
-
-  .scroller::-webkit-scrollbar-thumb {
-    background-color: #c81956;
-    border-radius: 10px;
-    border: 0px dotted #130b0b;
-  }

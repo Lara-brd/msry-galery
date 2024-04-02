@@ -1,6 +1,6 @@
 
 <div class="upButton" *ngIf="showButton" (click)="onScrollTop()">
-  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+  <button mat-fab class="upward-btn" color="primary" aria-label="Example icon button with a delete icon">
     <mat-icon>arrow_upward</mat-icon>
   </button>
 </div>
@@ -30,7 +30,7 @@
       <ng-template #search>
         <app-card-masonry  *ngFor="let photo of listSearch" [photo]="photo"></app-card-masonry>
       </ng-template>
-      
+
 
 
   </ngx-masonry>
